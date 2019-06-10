@@ -1,0 +1,6 @@
+<h1>Posts</h1>
+
+<ul class="list-group">
+  <!-- Uso del pipe async por esta razon no es necesario usar explicitamente el metodo subscribe() en el servicio -->
+  <app-post *ngFor="let post of mensajes | async" [post]="post" (clickPost)="listenClick($event)"></app-post>
+</ul>
